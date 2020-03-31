@@ -10,5 +10,5 @@ install:
 
 script:
   - dfx cache install
-  - $CACHE=dfx cache show
+  - CACHE=dfx cache show
   - vessel verify --moc=$CACHE/bin
