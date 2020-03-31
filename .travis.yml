@@ -10,5 +10,4 @@ install:
 
 script:
   - dfx cache install
-  - export CACHE=dfx cache show
-  - vessel verify --moc=$CACHE/moc
+  - vessel verify --moc=$(dfx cache show)/moc
