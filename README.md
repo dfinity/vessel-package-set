@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/kritzcreek/vessel-package-set.svg?branch=master)](https://travis-ci.org/kritzcreek/vessel-package-set)
+
 # Vessel Package Set
 
 I'm using this repository to figure out how to best host a package set for the
