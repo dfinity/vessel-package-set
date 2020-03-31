@@ -8,5 +8,5 @@ I'm using this repository to figure out how to best host a package set for the
 ## Usage in your project
 
 ```
-curl https://raw.githubusercontent.com/kritzcreek/vessel-package-set/master/package-set.json > package-set.json`
+curl https://raw.githubusercontent.com/kritzcreek/vessel-package-set/master/package-set.json > package-set.json
 ```
