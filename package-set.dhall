@@ -1,1 +1,1 @@
-./groups/dfinity.dhall # ./groups/kritzcreek.dhall
+./src/packages.dhall
