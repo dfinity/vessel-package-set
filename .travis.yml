@@ -10,4 +10,4 @@ install:
 
 script:
   - dfx cache install
-  - vessel verify --moc="$(dfx cache show)/moc" --moc-args="--package stdlib $(dfx cache show)/stdlib"
+  - vessel verify --moc="$(dfx cache show)/moc"
