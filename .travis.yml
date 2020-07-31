@@ -5,7 +5,7 @@ install:
   - travis_retry wget https://sdk.dfinity.org/install.sh
   - yes Y | sh install.sh
   - mkdir $HOME/vessel_bin
-  - travis_retry wget -O $HOME/vessel_bin/vessel https://github.com/kritzcreek/vessel/releases/latest/download/vessel-linux64
+  - travis_retry wget -O $HOME/vessel_bin/vessel https://github.com/kritzcreek/vessel/releases/download/v0.5.0-alpha/vessel-linux64
   - chmod +x $HOME/vessel_bin/vessel
 
 script:
