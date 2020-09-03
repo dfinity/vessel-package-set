@@ -1,12 +1,12 @@
 name: "build"
+
 on: push
+
 jobs:
   tests:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: Check if Git tag exists
-      run: echo "::set-env name=HEAD_TAG::$(git tag --points-at HEAD)"
+    - uses: actions/checkout@v2
     - name: "create bin directory"
       run: |
        mkdir -p /home/runner/bin
@@ -15,20 +15,5 @@ jobs:
       run: |
        wget --output-document /home/runner/bin/vessel https://github.com/kritzcreek/vessel/releases/download/v0.5.1-alpha/vessel-linux64
        chmod +x /home/runner/bin/vessel
-    - name: "install dhall"
-      run: |
-       wget --output-document dhall.tar.bz2 https://github.com/dhall-lang/dhall-haskell/releases/download/1.34.0/dhall-1.34.0-x86_64-linux.tar.bz2
-       tar xjf dhall.tar.bz2
-       cp bin/dhall /home/runner/bin/dhall
     - name: "verify"
       run: vessel verify --version 0.4.2
-    - name: "normalized package-set"
-      run: dhall resolve --file package-set.dhall > normalized
-    - name: Upload normalized package-set
-      uses: svenstaro/upload-release-action@v1-release
-      if: env.HEAD_TAG != ''
-      with:
-        repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: normalized
-        asset_name: package-set.dhall
-        tag: ${{ github.ref }}
