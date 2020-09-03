@@ -21,7 +21,7 @@ jobs:
        tar xjf dhall.tar.bz2
        cp bin/dhall /home/runner/bin/dhall
     - name: "verify"
-      run: vessel verify
+      run: vessel verify --version 0.4.2
     - name: "normalized package-set"
       run: dhall resolve --file package-set.dhall > normalized
     - name: Upload normalized package-set
