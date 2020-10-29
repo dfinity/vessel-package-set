@@ -1,5 +1,5 @@
 [ { name = "matchers"
-  , version = "v0.1.3"
+  , version = "v1.0.0"
   , repo = "https://github.com/kritzcreek/motoko-matchers"
   , dependencies = [ "base" ]
   }
