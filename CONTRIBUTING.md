@@ -65,7 +65,7 @@ To hack on this project, it should be enough to have [nix](https://nixos.org/nix
 
 If you're unable to run Nix but able to run `docker`, then you can achieve the same result with the following:
 
-    docker run -t --mount type=bind,source="$(pwd)",target=/package-sets nixos/nix /bin/sh -c 'cd /package-sets; nix-shell --run "make"'
+    docker run -t --mount type=bind,source="$(pwd)",target=/vessel-package-set nixos/nix /bin/sh -c 'cd /vessel-package-set; nix-shell --run "make"'
 
 If none of these are available you can also make the change to the `.dhall` files, open a pull request, and let CI run the checks for you at the price of long feedback cycles.
 
