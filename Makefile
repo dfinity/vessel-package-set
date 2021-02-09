@@ -1,9 +1,10 @@
 all: format
 
 format:
-	@find src/ -iname "*.dhall" -exec dhall format --inplace {} \;
+	dhall format --transitive package-set.dhall;
 	@echo formatted dhall files
 check-format:
-	@find src/ -iname "*.dhall" -exec dhall format --check {} \;
+	dhall format --check --transitive package-set.dhall;
+	@echo checked dhall files are formatted
 ci: check-format
 	vessel verify --version 0.5.7
