@@ -60,7 +60,7 @@ You can of course fix your package later and re-add it.
 
 To hack on this project, you'll need to have both `vessel` and `dhall` binaries on your PATH. You can check the [CI configuration][ci] for the used versions and how to get the binaries.
 
-If none of these are available you can also make the change to the `.dhall` files, open a pull request, and let CI run the checks for you at the price of long feedback cycles.
+If you can't get these to work for some reason you can also make the change to the `.dhall` files, open a pull request, and let CI run the checks for you at the price of long feedback cycles.
 
 ### TL;DR
 
