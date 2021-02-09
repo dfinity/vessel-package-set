@@ -25,7 +25,7 @@ The linked document also contains instructions on how to add new packages to the
 You should point the `package-set.dhall` file in your project at a tagged release of this repository like so:
 ```
 let upstream =
-  https://github.com/dfinity/vessel-package-set/releases/download/mo-0.4.2-20200904/package-set.dhall
+  https://github.com/kritzcreek/vessel-package-set/releases/download/mo-0.4.2-20200904/package-set.dhall
 in upstream
 ```
 
