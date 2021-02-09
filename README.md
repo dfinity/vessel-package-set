@@ -28,3 +28,7 @@ let upstream =
   https://github.com/dfinity/vessel-package-set/releases/download/mo-0.4.2-20200904/package-set.dhall
 in upstream
 ```
+
+## Attribution
+
+Much of this machinery and documentation is adapted from the lovely https://github.com/purescript/package-sets
