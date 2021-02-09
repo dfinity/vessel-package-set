@@ -58,14 +58,7 @@ You can of course fix your package later and re-add it.
 
 ### Prerequisites
 
-To hack on this project, it should be enough to have [nix](https://nixos.org/nix/download.html) installed. You can verify your changes with
-
-    nix-shell --command make
-
-
-If you're unable to run Nix but able to run `docker`, then you can achieve the same result with the following:
-
-    docker run -t --mount type=bind,source="$(pwd)",target=/vessel-package-set nixos/nix /bin/sh -c 'cd /vessel-package-set; nix-shell --run "make"'
+To hack on this project, you'll need to have both `vessel` and `dhall` binaries on your PATH. You can check the [CI configuration][ci] for the used versions and how to get the binaries.
 
 If none of these are available you can also make the change to the `.dhall` files, open a pull request, and let CI run the checks for you at the price of long feedback cycles.
 
@@ -171,13 +164,12 @@ In order to verify the addition (or change), you should follow these steps:
 - `make`: this will format the files with `dhall`
 - `vessel verify --version ${current-compiler-version} ${your-new-package-name}`
 
-Note: if you have `nix` installed, then you should run `nix-shell` and then run these commands inside, for better reproducibility.
-
 Once it verifies correctly check in both the Dhall files.
 
 You're now ready to commit! 🙂
 
 [dhall]: https://github.com/dhall-lang/dhall-haskell
-[releases]: https://github.com/dfinity/vessel-package-sets/releases
-[issues]: https://github.com/dfinity/vessel-package-sets/issues
-[vessel]: https://github.com/dfinity/vessel
+[releases]: https://github.com/kritzcreek/vessel-package-set/releases
+[issues]: https://github.com/kritzcreek/vessel-package-set/issues
+[vessel]: https://github.com/kritzcreek/vessel
+[ci]: https://github.com/kritzcreek/vessel-package-set/blob/master/.github/workflows/ci.yml
