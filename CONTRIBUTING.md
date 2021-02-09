@@ -116,6 +116,7 @@ The `Package.dhall` contains the simple type that is the definition of a package
 ```
 
 So a given package is nothing more than:
+- a name
 - a list of dependencies
 - the git url for the repository
 - and the tag or branch that it can be pulled from.
