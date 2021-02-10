@@ -1,5 +1,5 @@
 [ { name = "base"
-  , version = "84f1410bd1aeaff5afaf20b583ce6dc6a848e3b6"
+  , version = "4bb7c897e4c6111dc8aa32a5903b96782526900c"
   , repo = "https://github.com/dfinity/motoko-base"
   , dependencies = [] : List Text
   }
