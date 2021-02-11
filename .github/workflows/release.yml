@@ -8,17 +8,20 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      DHALL_VER: 1.38.0
     steps:
       - uses: actions/checkout@v2
-      - name: "create bin directory"
-        run: |
-         mkdir -p /home/runner/bin
-         echo "::add-path::/home/runner/bin"
-      - name: "install dhall"
-        run: |
-         wget --output-document dhall.tar.bz2 https://github.com/dhall-lang/dhall-haskell/releases/download/1.34.0/dhall-1.34.0-x86_64-linux.tar.bz2
-         tar xjf dhall.tar.bz2
-         cp bin/dhall /home/runner/bin/dhall
+    - name: "create bin directory"
+      run: |
+       mkdir -p /home/runner/bin
+       echo "$HOME/bin" >> $GITHUB_PATH
+    - name: "install dhall"
+      run: |
+       wget --output-document dhall-dl.tar.bz2 https://github.com/dhall-lang/dhall-haskell/releases/download/$DHALL_VER/dhall-$DHALL_VER-x86_64-linux.tar.bz2
+       mkdir dhall-dl
+       tar -jxvf dhall-dl.tar.bz2 -C dhall-dl
+       cp dhall-dl/bin/dhall /home/runner/bin/dhall
       - name: "render package-set"
         run: dhall resolve --file package-set.dhall > normalized
       - name: Create Release
