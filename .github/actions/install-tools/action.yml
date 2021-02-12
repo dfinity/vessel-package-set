@@ -23,7 +23,6 @@ runs:
        tar -jxvf dhall-dl.tar.bz2 -C dhall-dl
        cp dhall-dl/bin/dhall /home/runner/bin/dhall
     - name: "install vessel"
-      if: ${{ inputs.vessel_version != "" }}
       shell: bash
       run: |
        wget --output-document $HOME/bin/vessel https://github.com/kritzcreek/vessel/releases/download/v${{inputs.vessel_version}}/vessel-linux64
