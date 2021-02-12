@@ -10,19 +10,7 @@ jobs:
       DHALL_VER: 1.38.0
     steps:
     - uses: actions/checkout@v2
-    - name: "create bin directory"
-      run: |
-       mkdir -p /home/runner/bin
-       echo "$HOME/bin" >> $GITHUB_PATH
-    - name: "install dhall"
-      run: |
-       wget --output-document dhall-dl.tar.bz2 https://github.com/dhall-lang/dhall-haskell/releases/download/$DHALL_VER/dhall-$DHALL_VER-x86_64-linux.tar.bz2
-       mkdir dhall-dl
-       tar -jxvf dhall-dl.tar.bz2 -C dhall-dl
-       cp dhall-dl/bin/dhall /home/runner/bin/dhall
-    - name: "install vessel"
-      run: |
-       wget --output-document $HOME/bin/vessel https://github.com/kritzcreek/vessel/releases/download/v$VESSEL_VER/vessel-linux64
-       chmod +x /home/runner/bin/vessel
+    - name: "Install tools"
+      uses: ./.github/actions/install-tools
     - name: "verify"
       run: make ci
