@@ -1,8 +1,12 @@
 name: 'Installs dhall and vessel'
 description: 'Installs dhall and vessel'
-env:
-  DHALL_VER: 1.38.0
-  VESSEL_VER: 0.5.1
+inputs:
+  dhall_version:
+    description: 'Dhall version to install'
+    default: '1.38.0'
+  vessel_version:
+    description: 'Vessel version to install'
+    default: '0.5.1'
 runs:
   using: "composite"
   steps:
@@ -14,12 +18,12 @@ runs:
     - name: "install dhall"
       shell: bash
       run: |
-       wget --output-document dhall-dl.tar.bz2 https://github.com/dhall-lang/dhall-haskell/releases/download/$DHALL_VER/dhall-$DHALL_VER-x86_64-linux.tar.bz2
+       wget --output-document dhall-dl.tar.bz2 https://github.com/dhall-lang/dhall-haskell/releases/download/${{inputs.dhall_version}}/dhall-${{inputs.dhall_version}}-x86_64-linux.tar.bz2
        mkdir dhall-dl
        tar -jxvf dhall-dl.tar.bz2 -C dhall-dl
        cp dhall-dl/bin/dhall /home/runner/bin/dhall
     - name: "install vessel"
       shell: bash
       run: |
-       wget --output-document $HOME/bin/vessel https://github.com/kritzcreek/vessel/releases/download/v$VESSEL_VER/vessel-linux64
+       wget --output-document $HOME/bin/vessel https://github.com/kritzcreek/vessel/releases/download/v${{inputs.vessel_version}}/vessel-linux64
        chmod +x /home/runner/bin/vessel

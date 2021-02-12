@@ -5,12 +5,9 @@ on: push
 jobs:
   tests:
     runs-on: ubuntu-latest
-    env:
-      VESSEL_VER: 0.5.1
-      DHALL_VER: 1.38.0
     steps:
     - uses: actions/checkout@v2
-    - name: "Install tools"
+    - name: "install tools"
       uses: ./.github/actions/install-tools
     - name: "verify"
       run: make ci
