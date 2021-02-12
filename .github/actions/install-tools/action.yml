@@ -7,16 +7,19 @@ runs:
   using: "composite"
   steps:
     - name: "create bin directory"
+      shell: bash
       run: |
        mkdir -p /home/runner/bin
        echo "$HOME/bin" >> $GITHUB_PATH
     - name: "install dhall"
+      shell: bash
       run: |
        wget --output-document dhall-dl.tar.bz2 https://github.com/dhall-lang/dhall-haskell/releases/download/$DHALL_VER/dhall-$DHALL_VER-x86_64-linux.tar.bz2
        mkdir dhall-dl
        tar -jxvf dhall-dl.tar.bz2 -C dhall-dl
        cp dhall-dl/bin/dhall /home/runner/bin/dhall
     - name: "install vessel"
+      shell: bash
       run: |
        wget --output-document $HOME/bin/vessel https://github.com/kritzcreek/vessel/releases/download/v$VESSEL_VER/vessel-linux64
        chmod +x /home/runner/bin/vessel
