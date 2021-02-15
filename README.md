@@ -1,8 +1,8 @@
-[![Build Status](https://travis-ci.org/kritzcreek/vessel-package-set.svg?branch=master)](https://travis-ci.org/kritzcreek/vessel-package-set)
+![Package CI](https://github.com/dfinity/vessel-package-set/workflows/ci/badge.svg)
 
 # Vessel Package Set
 
-The official community package-set for Motoko libraries to use with [vessel](https://github.com/kritzcreek/vessel).
+The official community package-set for Motoko libraries to use with [vessel](https://github.com/dfinity/vessel).
 
 ## What is a package set?
 
@@ -25,7 +25,7 @@ The linked document also contains instructions on how to add new packages to the
 You should point the `package-set.dhall` file in your project at a tagged release of this repository like so:
 ```
 let upstream =
-  https://github.com/kritzcreek/vessel-package-set/releases/download/mo-0.4.2-20200904/package-set.dhall
+  https://github.com/dfinity/vessel-package-set/releases/download/mo-0.4.2-20200904/package-set.dhall
 in upstream
 ```
 

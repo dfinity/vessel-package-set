@@ -169,7 +169,7 @@ Once it verifies correctly check in both the Dhall files.
 You're now ready to commit! 🙂
 
 [dhall]: https://github.com/dhall-lang/dhall-haskell
-[releases]: https://github.com/kritzcreek/vessel-package-set/releases
-[issues]: https://github.com/kritzcreek/vessel-package-set/issues
-[vessel]: https://github.com/kritzcreek/vessel
-[ci]: https://github.com/kritzcreek/vessel-package-set/blob/master/.github/workflows/ci.yml
+[releases]: https://github.com/dfinity/vessel-package-set/releases
+[issues]: https://github.com/dfinity/vessel-package-set/issues
+[vessel]: https://github.com/dfinity/vessel
+[ci]: https://github.com/dfinity/vessel-package-set/blob/master/.github/workflows/ci.yml
