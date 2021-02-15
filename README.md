@@ -1,4 +1,4 @@
-![Package CI](https://github.com/dfinity/vessel-package-set/workflows/ci/badge.svg)
+![Package CI](https://github.com/dfinity/vessel-package-set/workflows/build/badge.svg)
 
 # Vessel Package Set
 
