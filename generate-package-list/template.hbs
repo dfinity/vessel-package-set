@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Motoko Packages</title>
+</head>
+<body>
+    <h1>Package set {{version}}</h1>
+    {{#each packages}}
+      <div class="package">
+          <div class="package-name">{{this.name}}</div>
+          <p class="package-description">{{this.description}}</p>
+      </div>
+    {{/each}}
+</body>
+</html>

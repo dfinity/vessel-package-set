@@ -1,0 +1,16 @@
+{
+  "name": "generate-package-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": " dhall-to-json --file ../src/packages.dhall | node index.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async-stdin-read": "^1.0.0",
+    "handlebars": "^4.7.7"
+  }
+}
