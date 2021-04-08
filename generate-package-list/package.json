@@ -1,16 +1,23 @@
 {
-  "name": "generate-package-list",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": " dhall-to-json --file ../src/packages.dhall | node index.mjs"
+  "watch": {
+    "build-dev": [
+      "template.hbs",
+      "dist/styles.css",
+      "index.mjs"
+    ]
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "scripts": {
+    "build": "dhall-to-json --file ../src/packages.dhall | node index.mjs",
+    "build-dev": "npm run build '<development>'",
+    "format": "prettier -w dist/* index.mjs",
+    "watch": "npm-watch"
+  },
   "dependencies": {
     "async-stdin-read": "^1.0.0",
     "handlebars": "^4.7.7"
+  },
+  "devDependencies": {
+    "npm-watch": "^0.9.0",
+    "prettier": "^2.2.1"
   }
 }

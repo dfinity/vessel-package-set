@@ -1,6 +1,6 @@
 { name = "crud"
 , description =
-    "A framework for constructing CRUD services in Motoko for the Internet Computer"
+    "A framework for constructing CRUD services in Motoko for the Internet Computer."
 , authors = [ "Matthew Hammer" ]
 , owners = [ "matthewhammer" ]
 , repo = "https://github.com/matthewhammer/motoko-crud.git"

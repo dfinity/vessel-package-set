@@ -1,19 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Motoko Packages</title>
 </head>
+
 <body>
-    <h1>Package set {{version}}</h1>
-    {{#each packages}}
-      <div class="package">
-          <div class="package-name">{{this.name}}</div>
-          <p class="package-description">{{this.description}}</p>
-      </div>
-    {{/each}}
+    <header>
+        <h3>Vessel Package Set</h3>
+        <code class="package-set-version">{{version}}</code>
+    </header>
+    <main>
+        <div class="packages">
+            {{#each packages}}
+            <div class="package">
+                <div class="package-header">
+                    <span class="header-text">
+                        <span class="header-name">
+                            {{this.name}}
+                        </span>
+                        &ndash;
+                        <span class="header-description">
+                            {{this.description}}
+                        </span>
+                    </span>
+                </div>
+                <div class="package-authors">
+                    <div class="label">Authors</div>
+                    <ul class="authors">
+                        {{#each this.authors}}
+                        <li>{{this}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <div class="package-repository">
+                    <div class="label">Repository</div>
+                    <a href="{{this.repo}}">{{this.repo}}</a>
+                </div>
+                <div class="package-version">
+                    <div class="label">Latest Version</div>
+                    <code>{{this.version}}</code>
+                </div>
+            </div>
+
+            {{/each}}
+        </div>
+    </main>
 </body>
+
 </html>
