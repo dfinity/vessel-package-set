@@ -1,93 +1,78 @@
-/*! Typebase.less v0.1.0 | MIT License */
-/* Setup */
-html {
-    /* Change default typefaces here */
-    font-family: serif;
-    font-size: 137.5%;
-    -webkit-font-smoothing: antialiased;
-  }
-  /* Copy & Lists */
-  p {
-    line-height: 1.5rem;
-    margin-top: 1.5rem;
-    margin-bottom: 0;
-  }
-  ul,
-  ol {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-  ul li,
-  ol li {
-    line-height: 1.5rem;
-  }
-  ul ul,
-  ol ul,
-  ul ol,
-  ol ol {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  blockquote {
-    line-height: 1.5rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-  /* Headings */
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    /* Change heading typefaces here */
-    font-family: sans-serif;
-    margin-top: 1.5rem;
-    margin-bottom: 0;
-    line-height: 1.5rem;
-  }
-  h1 {
-    font-size: 4.242rem;
-    line-height: 4.5rem;
-    margin-top: 3rem;
-  }
-  h2 {
-    font-size: 2.828rem;
-    line-height: 3rem;
-    margin-top: 3rem;
-  }
-  h3 {
-    font-size: 1.414rem;
-  }
-  h4 {
-    font-size: 0.707rem;
-  }
-  h5 {
-    font-size: 0.4713333333333333rem;
-  }
-  h6 {
-    font-size: 0.3535rem;
-  }
-  /* Tables */
-  table {
-    margin-top: 1.5rem;
-    border-spacing: 0px;
-    border-collapse: collapse;
-  }
-  table td,
-  table th {
-    padding: 0;
-    line-height: 33px;
-  }
-  /* Code blocks */
-  code {
-    vertical-align: bottom;
-  }
-  /* Leading paragraph text */
-  .lead {
-    font-size: 1.414rem;
-  }
-  /* Hug the block above you */
-  .hug {
-    margin-top: 0;
-  }
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 1.8em;
+  color: #4a4c4e;
+}
+
+code {
+  font-family: "Roboto Mono", monospace;
+}
+
+header {
+  text-align: center;
+}
+
+.package-set-version {
+  font-size: 1.3rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.packages {
+  margin: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.package {
+  margin: 1rem 0;
+  padding: 0 1rem;
+  border-left: 4px solid #d4297e;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.178);
+}
+
+.package-header {
+  margin-bottom: 0.5rem;
+  border-bottom: 1px dotted black;
+}
+
+.header-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.header-description {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.label {
+  display: inline-block;
+  width: 7rem;
+  text-align: right;
+  margin-right: 0.4rem;
+
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.authors {
+  display: inline;
+  list-style: none;
+  padding: 0px;
+}
+
+.authors li {
+  display: inline;
+}
+
+.authors li::after {
+  content: ", ";
+}
+
+.authors li:last-child::after {
+  content: "";
+}
