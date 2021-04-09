@@ -47,3 +47,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
           FOLDER: generate-package-list/dist
+          SINGLE_COMMIT: yes
