@@ -11,12 +11,10 @@ It defines some policies that are applied, and details how to add new packages a
 - [Releases](#releases)
 - [Will any package be dropped at any point?](#will-any-package-be-dropped-at-any-point)
 - [How to add a package to the set](#how-to-add-a-package-to-the-set)
-  - [0. Background knowledge](#0-background-knowledge)
-    - [Why/how Dhall?](#whyhow-dhall)
-    - [Brief detour of how the package-set is structured](#brief-detour-of-how-the-package-set-is-structured)
-    - [Prerequisites](#prerequisites)
-  - [1. Adding a new package](#1-adding-a-new-package)
-  - [2. Verifying a package](#2-verifying-a-package)
+  - [Prerequisites](#prerequisites)
+  - [Adding a new package](#adding-a-new-package)
+  - [Verifying a package](#verifying-a-package)
+  - [Updating a package](#updating-a-package)
 
 
 ## General
