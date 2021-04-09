@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
@@ -32,21 +33,29 @@
                         </span>
                     </span>
                 </div>
-                <div class="package-authors">
-                    <div class="label">Authors</div>
-                    <ul class="authors">
-                        {{#each this.authors}}
-                        <li>{{this}}</li>
-                        {{/each}}
-                    </ul>
-                </div>
-                <div class="package-repository">
-                    <div class="label">Repository</div>
-                    <a href="{{this.repo}}">{{this.repo}}</a>
-                </div>
-                <div class="package-version">
-                    <div class="label">Latest Version</div>
-                    <code>{{this.version}}</code>
+                <div class="package-details">
+                    <div class="package-detail-label">Authors</div>
+                    <div class="package-detail-content">
+                        <ul class="authors">
+                            {{#each this.authors}}
+                            <li>{{this}}</li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                    <div class="package-detail-label">Repository</div>
+                    <div class="package-detail-content">
+                        <a href="{{this.repo}}">{{this.repo}}</a>
+                    </div>
+                    {{#if this.homepage}}
+                    <div class="package-detail-label">Homepage</div>
+                    <div class="package-detail-content">
+                        <a href="{{this.homepage}}">{{this.homepage}}</a>
+                    </div>
+                    {{/if}}
+                    <div class="package-detail-label">Latest Version</div>
+                    <div class="package-detail-content">
+                        <code>{{this.version}}</code>
+                    </div>
                 </div>
             </div>
 

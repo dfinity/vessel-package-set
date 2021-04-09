@@ -49,14 +49,21 @@ main {
   font-weight: 400;
 }
 
-.label {
-  display: inline-block;
-  width: 7rem;
-  text-align: right;
-  margin-right: 0.4rem;
+.package-details {
+  display: grid;
+  column-gap: 0.4rem;
+  grid: auto auto auto / max-content auto;
+}
+
+.package-detail-label {
+  grid-column: 0 1;
+  justify-self: end;
 
   font-size: 1rem;
-  font-weight: 400;
+}
+
+.package-detail-content {
+  grid-column: 1 2;
 }
 
 .authors {

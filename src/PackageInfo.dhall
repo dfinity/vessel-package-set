@@ -1,4 +1,5 @@
 { authors : List Text
+, homepage : Optional Text
 , dependencies : List Text
 , description : Text
 , name : Text
