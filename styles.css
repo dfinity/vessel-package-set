@@ -1,0 +1,85 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 1.8em;
+  color: #4a4c4e;
+}
+
+code {
+  font-family: "Roboto Mono", monospace;
+}
+
+header {
+  text-align: center;
+}
+
+.package-set-version {
+  font-size: 1.3rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.packages {
+  margin: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.package {
+  margin: 1rem 0;
+  padding: 0 1rem;
+  border-left: 4px solid #d4297e;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.178);
+}
+
+.package-header {
+  margin-bottom: 0.5rem;
+  border-bottom: 1px dotted black;
+}
+
+.header-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.header-description {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.package-details {
+  display: grid;
+  column-gap: 0.4rem;
+  grid: auto auto auto / max-content auto;
+}
+
+.package-detail-label {
+  grid-column: 0 1;
+  justify-self: end;
+
+  font-size: 1rem;
+}
+
+.package-detail-content {
+  grid-column: 1 2;
+}
+
+.authors {
+  display: inline;
+  list-style: none;
+  padding: 0px;
+}
+
+.authors li {
+  display: inline;
+}
+
+.authors li::after {
+  content: ", ";
+}
+
+.authors li:last-child::after {
+  content: "";
+}
