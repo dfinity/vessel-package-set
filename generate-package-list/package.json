@@ -9,7 +9,8 @@
   "scripts": {
     "build": "dhall-to-json --file ../src/packages.dhall | node index.mjs",
     "build-dev": "npm run build '<development>'",
-    "format": "prettier -w dist/* index.mjs",
+    "format": "prettier -w dist/styles.css dist/index.html index.mjs",
+    "format-check": "prettier -c dist/styles.css index.mjs",
     "watch": "npm-watch"
   },
   "dependencies": {

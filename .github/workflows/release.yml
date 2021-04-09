@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+      - uses: dhall-lang/setup-dhall@v4
       - name: "install tools"
         uses: ./.github/actions/install-tools
       - name: "render package-set"
@@ -34,3 +36,14 @@ jobs:
           asset_path: normalized
           asset_name: package-set.dhall
           asset_content_type: application/x-dhall
+      - name: Generate Package Listing
+        run: |
+          cd generate-package-list
+          npm install --only=production
+          npm run build ${{ github.ref }}
+      - name: Upload Package Listing
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: generate-package-list/dist

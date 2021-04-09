@@ -11,7 +11,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+    - uses: dhall-lang/setup-dhall@v4
     - name: "install tools"
       uses: ./.github/actions/install-tools
     - name: "verify"
       run: make ci
+    - name: "build package list"
+      run: |
+        cd generate-package-list
+        npm install
+        npm run format-check
+        npm run build "<CI>"

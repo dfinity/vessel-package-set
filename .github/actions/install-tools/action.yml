@@ -1,9 +1,6 @@
-name: 'Installs dhall and vessel'
-description: 'Installs dhall and vessel'
+name: 'Installs vessel'
+description: 'Installs vessel'
 inputs:
-  dhall_version:
-    description: 'Dhall version to install'
-    default: '1.38.0'
   vessel_version:
     description: 'Vessel version to install'
     default: '0.6.0'
@@ -15,13 +12,6 @@ runs:
       run: |
        mkdir -p /home/runner/bin
        echo "$HOME/bin" >> $GITHUB_PATH
-    - name: "install dhall"
-      shell: bash
-      run: |
-       wget --output-document dhall-dl.tar.bz2 https://github.com/dhall-lang/dhall-haskell/releases/download/${{inputs.dhall_version}}/dhall-${{inputs.dhall_version}}-x86_64-linux.tar.bz2
-       mkdir dhall-dl
-       tar -jxvf dhall-dl.tar.bz2 -C dhall-dl
-       cp dhall-dl/bin/dhall /home/runner/bin/dhall
     - name: "install vessel"
       shell: bash
       run: |
