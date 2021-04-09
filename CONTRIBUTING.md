@@ -62,101 +62,17 @@ To hack on this project, you'll need to have both `vessel` and `dhall` binaries 
 
 If you can't get these to work for some reason you can also make the change to the `.dhall` files, open a pull request, and let CI run the checks for you at the price of long feedback cycles.
 
-### TL;DR
+### Adding a Package
 
 The following section will detail how to add a package to the package-set.
 
 The *TL;DR* about it is:
-- add the Dhall package definition in some `src/groups/${username}.dhall` (where `username` is one of the authors of the package)
-- if adding a new group file, also add a new line containing `# ./groups/${username}.dhall` to `src/packages.dhall`
+- add the Dhall package definition in some `index/${package-name}.dhall`
+- also add an entry containing `, ../index/${package-name}.dhall` to `src/packages.dhall`
 - run `make` and `vessel verify --version ${current-compiler-version} ${your-new-package-name}`
 
-### 0. Background knowledge
 
-#### Why/how Dhall?
-
-[Dhall](https://github.com/dhall-lang/dhall-lang) is a programming language that guarantees
-termination. Its most useful characteristics for uses in this project are:
-* Static typing with correct inference
-* Functions: we can use functions to create simple functions for defining packages
-* Local and remote path importing: we can use this to mix and match local and remote sources as necessary to build package sets
-* Typed records with directed merging: we can use this to split definitions into multiple groupings and apply patching of existing packages as needed
-
-Let's look at the individual parts for how this helps us make a package-set.
-
-#### Brief detour of how the package-set is structured
-
-The files in this package-set are structured as such:
-
-```
--- Package type definition
-src/Package.dhall
-
--- packages to be included when building package set
-src/packages.dhall
-
--- package "groups" where packages are defined in records
-src/groups/[...].dhall
-
--- The entry point to the package-set. Just points at `src/packages.dhall`
-./package-set.dhall
-```
-
-The `Package.dhall` contains the simple type that is the definition of a package:
-
-```hs
-{ name : Text, dependencies : List Text, repo : Text, version : Text }
-```
-
-So a given package is nothing more than:
-- a name
-- a list of dependencies
-- the git url for the repository
-- and the tag or branch that it can be pulled from.
-
-The `packages.dhall` is the actual "package-set": a list of package definitions.
-It is defined by taking package definitions from the groups and concatenating them.
-
-```
-  ./groups/dfinity.dhall
-# ./groups/kritzcreek.dhall
-# ./groups/matthewhammer.dhall
-# ./groups/enzoh.dhall
-# ...
-```
-
-### 1. Adding a new package
-
-To add a new package to the package set, you should create a package definition matching the Package type, and put it in the group file corresponding to the author's username.
-
-For example, if I wish to add to the package-set the version `v4.2.0` of the package `some-food` from `someauthor`, I will create the file `src/groups/someauthor.dhall`.
-
-Its content would look something like this:
-
-```hs
-[ { name =  "some-food"
-  , dependencies =
-      [ "base" ]
-  , repo =
-      "https://github.com/someauthor/motoko-some-food.git"
-  , version =
-      "v4.2.0"
-  }
-]
-```
-
-Then add a new line containing a reference to the new group to the `src/packages.dhall` file.
-
-For our example:
-
-```hs
-…
-      # ./groups/someauthor.dhall
-…
-```
-
-
-### 2. Verifying a package
+### Verifying a package
 
 After adding your package to the Dhall files, you should check that the package-set is still consistent.
 
@@ -167,6 +83,10 @@ In order to verify the addition (or change), you should follow these steps:
 Once it verifies correctly check in both the Dhall files.
 
 You're now ready to commit! 🙂
+
+### Updating a package
+
+In order to update the version of a package, change `version` field in `index/{package-name}.dhall`, and run the "Verifying a package" steps as outlined above. The next package set release will then include the updated package.
 
 [dhall]: https://github.com/dhall-lang/dhall-haskell
 [releases]: https://github.com/dfinity/vessel-package-set/releases
