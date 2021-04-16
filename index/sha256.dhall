@@ -4,6 +4,6 @@
 , authors = [ "Enzo Haussecker" ]
 , owners = [ "enzoh" ]
 , repo = "https://github.com/enzoh/motoko-sha.git"
-, version = "932a87aedb4760788e2d2ddbd3fa9fae9afb25cc"
+, version = "9e2468f51ef060ae04fde8d573183191bda30189"
 , dependencies = [ "base" ]
 }
