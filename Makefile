@@ -7,4 +7,4 @@ check-format:
 	dhall format --check --transitive package-set.dhall;
 	@echo checked dhall files are formatted
 ci: check-format
-	vessel verify --version 0.5.14
+	vessel verify --version 0.6.0
