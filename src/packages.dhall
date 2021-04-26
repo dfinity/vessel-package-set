@@ -4,4 +4,5 @@
 , ../index/parsec.dhall
 , ../index/scc.dhall
 , ../index/sha256.dhall
+, ../index/icip.dhall
 ]
