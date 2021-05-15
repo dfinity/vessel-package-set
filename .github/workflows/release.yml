@@ -15,7 +15,7 @@ jobs:
       - name: "install tools"
         uses: ./.github/actions/install-tools
       - name: "render package-set"
-        run: dhall resolve --file package-set.dhall > normalized
+        run: dhall resolve --file package-set.dhall | dhall > normalized
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
