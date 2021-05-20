@@ -4,6 +4,6 @@
 , authors = [ "Inv Lo" ]
 , owners = [ "feliciss" ]
 , repo = "https://github.com/feliciss/icip.git"
-, version = "v1.1.1"
+, version = "v1.2.0"
 , dependencies = [ "base" ]
 }
