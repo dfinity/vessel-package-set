@@ -6,4 +6,5 @@
 , ../index/sha256.dhall
 , ../index/icip.dhall
 , ../index/pretty.dhall
+, ../index/sha224.dhall
 ]
