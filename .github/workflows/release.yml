@@ -40,6 +40,7 @@ jobs:
           asset_content_type: application/x-dhall
       - name: Upload package-set.json
         id: upload-package-set-json
+        uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
