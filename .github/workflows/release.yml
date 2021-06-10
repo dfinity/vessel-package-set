@@ -15,7 +15,9 @@ jobs:
       - name: "install tools"
         uses: ./.github/actions/install-tools
       - name: "render package-set"
-        run: dhall resolve --file package-set.dhall | dhall > normalized
+        run: |
+          dhall resolve --file package-set.dhall | dhall > normalized
+          dhall-to-json --file normalized > normalized.json
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -26,8 +28,8 @@ jobs:
           release_name: ${{ github.ref }}
           draft: false
           prerelease: false
-      - name: Upload Release Asset
-        id: upload-release-asset
+      - name: Upload package-set.dhall
+        id: upload-package-set-dhall
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -36,6 +38,15 @@ jobs:
           asset_path: normalized
           asset_name: package-set.dhall
           asset_content_type: application/x-dhall
+      - name: Upload package-set.json
+        id: upload-package-set-json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: normalized.json
+          asset_name: package-set.json
+          asset_content_type: application/json
       - name: Generate Package Listing
         run: |
           cd generate-package-list
