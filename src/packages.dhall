@@ -7,4 +7,5 @@
 , ../index/icip.dhall
 , ../index/pretty.dhall
 , ../index/sha224.dhall
+, ../index/splay.dhall
 ]
