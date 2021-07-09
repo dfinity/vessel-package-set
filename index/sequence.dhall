@@ -1,6 +1,6 @@
 { name = "sequence"
 , description = "Persistent sequence representation and algorithms."
-, homepage = "http://matthewhammer.org/motoko-sequence/"
+, homepage = Some "http://matthewhammer.org/motoko-sequence/"
 , authors = [ "Matthew Hammer" ]
 , owners = [ "matthewhammer" ]
 , repo = "https://github.com/matthewhammer/motoko-sequence.git"
