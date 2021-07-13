@@ -4,6 +4,6 @@
 , authors = [ "Matthew Hammer" ]
 , owners = [ "matthewhammer" ]
 , repo = "https://github.com/matthewhammer/motoko-sequence.git"
-, version = "v0.1.0"
-, dependencies = [ "base", "crud" ]
+, version = "v0.1.1"
+, dependencies = [ "base" ]
 }
