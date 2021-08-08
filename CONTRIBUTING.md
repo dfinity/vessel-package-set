@@ -23,6 +23,7 @@ All changes go through pull requests.
 Packages must comply with the following criteria.
 - They build against their dependencies at the versions specified in the current package-set
 - Your package must be versioned using SemVer and begin with a `v` like so: `v1.2.3`
+  (`base` is the outlier to this rule, using a hash instead, because we lack versioning for it now).
 
 ## Releases
 
