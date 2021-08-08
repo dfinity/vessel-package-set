@@ -9,4 +9,5 @@
 , ../index/sha224.dhall
 , ../index/splay.dhall
 , ../index/sequence.dhall
+, ../index/base32.dhall
 ]
