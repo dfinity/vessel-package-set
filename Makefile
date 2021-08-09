@@ -9,4 +9,4 @@ check-format:
 	dhall type --file package-set.dhall;
 	@echo checked dhall files are well-typed.
 ci: check-format
-	vessel verify --version 0.6.5
+	vessel verify --version 0.6.6
