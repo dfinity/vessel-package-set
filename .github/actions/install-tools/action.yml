@@ -15,5 +15,5 @@ runs:
     - name: "install vessel"
       shell: bash
       run: |
-       wget --output-document $HOME/bin/vessel https://github.com/kritzcreek/vessel/releases/download/v${{inputs.vessel_version}}/vessel-linux64
+       wget --output-document $HOME/bin/vessel https://github.com/dfinity/vessel/releases/download/v${{inputs.vessel_version}}/vessel-linux64
        chmod +x /home/runner/bin/vessel
