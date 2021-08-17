@@ -10,4 +10,5 @@
 , ../index/splay.dhall
 , ../index/sequence.dhall
 , ../index/base32.dhall
+, ../index/adapton.dhall
 ]
