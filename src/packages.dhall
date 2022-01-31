@@ -11,4 +11,6 @@
 , ../index/sequence.dhall
 , ../index/base32.dhall
 , ../index/adapton.dhall
+, ../index/iterext.dhall
+, ../index/sha2.dhall
 ]
