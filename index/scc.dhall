@@ -4,6 +4,6 @@
 , authors = [ "Joachim Breitner" ]
 , owners = [ "nomeata" ]
 , repo = "https://github.com/nomeata/motoko-scc.git"
-, version = "v0.1"
+, version = "v0.1.1"
 , dependencies = [ "base" ]
 }
