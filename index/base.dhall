@@ -5,6 +5,6 @@
 , authors = [ "The DFINITY Language Team" ]
 , owners = [ "kritzcreek", "dfinity" ]
 , repo = "https://github.com/dfinity/motoko-base.git"
-, version = "494824a2787aee24ab4a5888aa519deb05ecfd60"
+, version = "360236801eb1cb47fc7664761cc115b4c34db5ee"
 , dependencies = [] : List Text
 }
