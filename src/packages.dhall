@@ -13,4 +13,5 @@
 , ../index/adapton.dhall
 , ../index/iterext.dhall
 , ../index/sha2.dhall
+, ../index/easy-random.dhall
 ]
