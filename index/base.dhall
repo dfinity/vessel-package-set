@@ -1,9 +1,9 @@
 { name = "base"
 , description = "The Motoko standard library"
 , homepage = Some
-    "https://sdk.dfinity.org/docs/base-libraries/stdlib-intro.html"
-, authors = [ "The DFINITY Language Team" ]
-, owners = [ "kritzcreek", "dfinity" ]
+    "https://internetcomputer.org/docs/current/developer-docs/build/cdks/motoko-dfinity/base-intro"
+, authors = [ "The DFINITY Languages Team" ]
+, owners = [ "dfinity" ]
 , repo = "https://github.com/dfinity/motoko-base.git"
 , version = "f602517f9e397e7ed404ad1b07e90d0562fc458a"
 , dependencies = [] : List Text
