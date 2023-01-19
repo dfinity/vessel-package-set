@@ -4,6 +4,6 @@
 , authors = [ "Yan Chen" ]
 , owners = [ "chenyan2002" ]
 , repo = "https://github.com/chenyan2002/motoko-splay.git"
-, version = "v0.1.0"
+, version = "f8e50749f9c4d7ccae99694c35310ac68945a225"
 , dependencies = [ "base" ]
 }

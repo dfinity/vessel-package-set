@@ -4,6 +4,6 @@
 , authors = [ "Christoph Hegemann" ]
 , owners = [ "kritzcreek" ]
 , repo = "https://github.com/kritzcreek/motoko-matchers.git"
-, version = "v1.2.0"
+, version = "7f95f69ae9a399cedf161d90738db822f315c07e"
 , dependencies = [ "base" ]
 }
