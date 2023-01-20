@@ -4,6 +4,6 @@
 , authors = [ "flyq" ]
 , owners = [ "flyq" ]
 , repo = "https://github.com/flyq/motoko-base32.git"
-, version = "v0.1.1"
+, version = "067ac54e288f4cd7302be1f400bcddcce70f7d77"
 , dependencies = [ "base" ]
 }
