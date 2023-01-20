@@ -5,6 +5,6 @@
 , authors = [ "Matthew Hammer" ]
 , owners = [ "matthewhammer" ]
 , repo = "https://github.com/matthewhammer/motoko-adapton.git"
-, version = "v0.1.1"
+, version = "d1b130fd930d8b498b66d2a2c6a45beea3f67c3a"
 , dependencies = [ "base" ]
 }

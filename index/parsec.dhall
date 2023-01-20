@@ -4,6 +4,6 @@
 , authors = [ "Claudio Russo" ]
 , owners = [ "crusso" ]
 , repo = "https://github.com/crusso/mo-parsec.git"
-, version = "v1.0.0"
+, version = "6d84fe23245dac4c8c6c83f83349d972dd98289c"
 , dependencies = [ "base" ]
 }
