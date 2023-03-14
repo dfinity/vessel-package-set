@@ -14,4 +14,6 @@
 , ../index/iterext.dhall
 , ../index/sha2.dhall
 , ../index/easy-random.dhall
+, ../index/xtended-numbers.dhall
+, ../index/cbor.dhall
 ]
