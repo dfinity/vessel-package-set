@@ -16,4 +16,5 @@
 , ../index/easy-random.dhall
 , ../index/xtended-numbers.dhall
 , ../index/cbor.dhall
+, ../index/ic-certification.dhall
 ]
