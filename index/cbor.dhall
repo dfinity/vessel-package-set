@@ -4,6 +4,6 @@
 , authors = [ "Ethan Celletti" ]
 , owners = [ "gekctek" ]
 , repo = "https://github.com/gekctek/motoko_cbor"
-, version = "v1.0.1"
+, version = "5adf22b177d187d076b222e94b3fdf071b7c0b65"
 , dependencies = [ "xtended-numbers" ] : List Text
 }
