@@ -3,7 +3,7 @@
 , homepage = Some "https://github.com/edjCase/motoko_numbers"
 , authors = [ "Ethan Celletti" ]
 , owners = [ "gekctek" ]
-, version = "v1.0.2"
+, version = "773953141f976ccdfc2e6a2c451b841a53bb39a0"
 , repo = "https://github.com/edjcase/motoko_numbers"
 , dependencies = [ "base" ]
 }
