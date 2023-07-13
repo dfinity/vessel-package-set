@@ -2,11 +2,6 @@
 
 The official community package-set for Motoko libraries to use with [vessel](https://github.com/dfinity/vessel).
 
-## Upcoming changes
-
-#### Vessel is currently being redesigned to improve the UX and scalability of the Motoko package ecosystem.
-If you want to see a specific feature in the next version of Vessel, this is the best time to make your voice heard by submitting a request in the [dfinity/vessel](https://github.com/dfinity/vessel/issues/new) GitHub repository. Thank you! 
-
 ## What is a package set?
 
 A package set is a collection of packages in which there is only one specified version for each package in the set.
