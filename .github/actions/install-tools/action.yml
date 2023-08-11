@@ -3,7 +3,7 @@ description: 'Installs vessel'
 inputs:
   vessel_version:
     description: 'Vessel version to install'
-    default: '0.6.2'
+    default: '0.7.0'
 runs:
   using: "composite"
   steps:
