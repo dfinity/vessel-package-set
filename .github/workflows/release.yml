@@ -12,6 +12,8 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
       - uses: dhall-lang/setup-dhall@v4
+        with:
+          version: 1.42.0
       - name: "install tools"
         uses: ./.github/actions/install-tools
       - name: "render package-set"
