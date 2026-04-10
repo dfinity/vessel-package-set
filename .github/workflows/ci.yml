@@ -10,9 +10,9 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-    - uses: dhall-lang/setup-dhall@v4
+    - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+    - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+    - uses: dhall-lang/setup-dhall@6b28be8f2912e67dd49585759e165ef53e4f7518 # v4.4.0
       with:
         version: 1.42.0
     - name: "install tools"
