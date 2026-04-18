@@ -1,4 +1,4 @@
-# Vessel Package Set &middot; [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![CI](https://img.shields.io/github/actions/workflow/status/dfinity/vessel-package-set/ci.yml?branch=master&logo=github)](https://github.com/dfinity/vessel-package-set/actions?query=workflow:"build") [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/dfinity/vessel-package-set/pulls)
+# Vessel Package Set &middot; [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![CI](https://github.com/dfinity/vessel-package-set/actions/workflows/ci.yml/badge.svg)](https://github.com/dfinity/vessel-package-set/actions?query=workflow:"build") [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/dfinity/vessel-package-set/pulls)
 
 The official community package-set for Motoko libraries to use with [vessel](https://github.com/dfinity/vessel).
 
